@@ -13,10 +13,10 @@ const TeamMembers = () => {
       image: '/Shubham.jpg'
     },
     {
-      name: 'Malay Jain',
-      role: 'Innovative Researcher & AI Developer',
-      expertise: 'Applied AI research, generative AI experimentation, intelligent product development',
-      image: '/Malay.jpg'
+      name: 'Nikky Bisen',
+      role: 'Python Developer',
+      expertise: 'Python automation, data pipelines, API integrations for AI-ready infrastructure',
+      image: '/Nikky B .png'
     },
     {
       name: 'Aniket Kumar Mishra',
@@ -25,21 +25,27 @@ const TeamMembers = () => {
       image: '/aniket_mishra_26Jx5J6.webp'
     },
     {
-      name: 'Nikky Bisen',
-      role: 'Python Developer',
-      expertise: 'Python automation, data pipelines, API integrations for AI-ready infrastructure',
-      image: '/Nikky B .png'
+      name: 'Malay Jain',
+      role: 'Innovative Researcher & AI Developer',
+      expertise: 'Applied AI research, generative AI experimentation, intelligent product development',
+      image: '/Malay.jpg'
     },
     {
       name: 'Atul Jaitwar',
       role: 'Software Engineer',
       expertise: 'Cloud-native applications, performance optimization, secure software delivery',
       image: '/atul jaitwar.jpg'
+    },
+    {
+      name: 'Brajesh Ahirwar',
+      role: 'Machine Learning Engineer',
+      expertise: 'Model development, feature engineering, production deployment pipelines',
+      image: '/brajesh.jpg'
     }
   ]
 
-  const topRowMembers = teamMembers.slice(0, 2)
-  const bottomRowMembers = teamMembers.slice(2)
+  const topRowMembers = teamMembers.slice(0, 3)
+  const bottomRowMembers = teamMembers.slice(3)
 
   const renderMemberCard = (member: (typeof teamMembers)[number], index: number) => (
     <motion.div
@@ -105,10 +111,10 @@ const TeamMembers = () => {
       <div className="absolute inset-0 particle-bg" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row justify-center gap-6 lg:gap-8 mb-12">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mb-12">
           {topRowMembers.map((member, index) => renderMemberCard(member, index))}
         </div>
-        <div className="grid gap-10 sm:grid-cols-1 lg:grid-cols-3 justify-items-center">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {bottomRowMembers.map((member, index) => renderMemberCard(member, index + topRowMembers.length))}
         </div>
       </div>
